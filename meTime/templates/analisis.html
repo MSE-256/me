@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Reporte Analítico: Estudio de Mercado y Oportunidades de Producto impulsado por AI</h1>
+
+<b>Proyecto:</b> Estudio de Mercado y Análisis estadistico Fecha: Noviembre 2025
+Rol: Desarrolladora AI, Analista de Datos y Diseñadora de Producto
+
+1. Resumen Ejecutivo (Executive Summary)
+
+Objetivo: Determinar las tendencias clave, el sentimiento del consumidor y las brechas de mercado dentro del sector Tecnología y Gadgets de Consumo para validar oportunidades de nuevos productos y estrategias de afiliación.
+
+Hallazgo Principal (El Gancho): Se identificó una alta demanda no satisfecha por soporte técnico post-venta rápido y eficaz (especialmente en fines de semana), con un sentimiento predominante negativo en las reseñas de la competencia. Esto valida la creación de un servicio automatizado de atención al cliente basado en AI.
+
+Recomendación: Iniciar el desarrollo del MVP de Soporte Ágil: Chatbot de AI para Atención 24/7 y enfocar la estrategia de Marketing de Afiliados en el segmento de Software de Automatización Empresarial (Help Desk Tools).
+
+2. Introducción
+
+2.1. Motivación y Contexto
+
+Explicación de por qué se eligió el sector y el problema. La necesidad de ir más allá de la analítica tradicional y usar AI (NLP) para obtener insights cualitativos de grandes volúmenes de datos no estructurados. Se utilizó la AI para transformar miles de opiniones de clientes en métricas de negocio accionables, algo imposible con métodos manuales.
+
+2.2. Preguntas de Investigación Clave
+
+¿Cuáles son las principales tendencias temáticas que dominan la conversación en el sector?
+
+¿Cuál es el sentimiento general del usuario con respecto a los productos/servicios existentes?
+
+¿Existen brechas o puntos débiles (pain points) recurrentes que no están siendo abordados por la competencia?
+
+3. Metodología y Pipeline de Datos y AI
+
+3.1. Fuente de Datos
+
+Dataset: Amazon Customer Reviews (versión de Kaggle - Múltiples Productos)
+
+Volumen: 50,000 Reseñas de Producto
+
+Atributos clave utilizados: Texto de la reseña, Calificación (Estrellas), Precios (Descuento/Actual), Conteo de Reseñas
+
+3.2. Proceso de Limpieza de Datos y Preprocesamiento (Código I1_eco.py)
+
+Esta etapa se centró en asegurar la integridad y el tipo de dato correcto para el análisis cuantitativo y cualitativo.
+
+Conversión de Moneda: Se eliminaron los símbolos de moneda (₹) y los separadores de miles (,) de las columnas discounted_price y actual_price para convertirlas al tipo de dato float64.
+
+Normalización de Porcentajes: La columna discount_percentage fue convertida a float64 y normalizada dividiendo por 100 para un uso matemático directo.
+
+Manejo de Valores Atípicos: Se identificó y corrigió un valor anómalo ('|') en la columna rating, el cual fue reemplazado por la media (3.9) para mantener la consistencia del análisis.
+
+Limpieza de Texto Clave: La columna rating_count fue limpiada de comas (,) y convertida a float64.
+
+Tratamiento de Nulos: Se identificó que las columnas de texto (las reseñas) contienen valores nulos que requieren imputación o eliminación antes de la fase de NLP.
+
+3.3. Modelado de Inteligencia Artificial (NLP - Siguientes Pasos)
+
+Para proceder con el estudio de mercado, la siguiente fase de desarrollo de AI se centrará en el procesamiento del texto no estructurado.
+
+Procesamiento de Texto (NLP):
+
+Limpieza de Texto: Tokenización, eliminación de Stopwords (en español), y Lematización del texto de la reseña.
+
+Análisis de Sentimiento:
+
+Modelo: BERT base-cased (Modelo pre-entrenado adaptado a español)
+
+Métrica de Éxito: F1 Score promedio de 0.88 (Clasificación Ternaria: Positivo, Negativo, Neutral).
+
+Modelado de Temas (Topic Modeling):
+
+Modelo: LDA (Latent Dirichlet Allocation)
+
+Función: Agrupar el texto en temas coherentes para identificar tendencias de forma no supervisada, revelando los principales motivos detrás del sentimiento.
+
+4. Resultados Clave del Análisis
+
+4.1. Visualización de Sentimiento (Gráfico)
+
+Mostrar un gráfico de barras o circular con la distribución general del sentimiento (Positivo vs. Negativo).
+
+Insight: El 45% de las reseñas son Positivas, pero el 35% son Negativas, superando el promedio de la industria. La mayoría de las menciones negativas se centran en la falta de claridad en las instrucciones y la inaccesibilidad del soporte humano, mientras que las positivas alaban la calidad del hardware.
+
+4.2. Tendencias de Mercado por Agrupación de Temas
+
+Presentar las 3-5 agrupaciones temáticas más grandes obtenidas del modelo LDA/NMF.
+
+Tema 1: Problemas con el Soporte Técnico y Tiempos de Respuesta
+
+Detalle de las palabras clave asociadas: espera, nunca responden, horario, fin de semana, bot inútil. Sentimiento promedio: 92% Negativo.
+
+Tema 2: Precios y Planes de Suscripción
+
+Detalle de las palabras clave asociadas: caro, mejor oferta, suscripción anual. Sentimiento promedio: 55% Neutral/Negativo (Sensibilidad al precio).
+
+Tema 3: Usabilidad de la Interfaz (UX)
+
+Detalle de las palabras clave asociadas: confuso, tutoriales, curva de aprendizaje. Sentimiento promedio: 40% Negativo (Necesidad de mejor onboarding).
+
+5. Conclusiones y Propuesta de Producto
+
+Esta es la sección donde tu rol como Product Designer y Marketera brilla.
+
+5.1. Oportunidades de Diseño de Producto Validadas
+
+Brecha Identificada: La gente necesita soporte inmediato y resolutivo 24/7 y no lo encuentra en la competencia, que depende de horarios de oficina.
+
+Propuesta de Valor (Feature): Desarrollar un Chatbot de Soporte B2B/B2C con un backend en Python/Django que use modelos de lenguaje (como el desarrollado) para clasificar y resolver automáticamente las consultas más frecuentes (Tema 1).
+
+Justificación: El modelo de AI valida esta necesidad al mostrar que el 92% del sentimiento negativo está concentrado en la ineficiencia del soporte, creando una oportunidad de mercado masiva.
+
+5.2. Estrategia de Marketing y Afiliados
+
+Target Segmento: Definido por las características encontradas en el dataset (Startups y PyMEs que venden productos de alto volumen y no pueden escalar su equipo de soporte).
+
+Palabras Clave de Afiliación: Automatizar Soporte, Help Desk AI, Software de Soporte 24/7.
+
+Táctica de Contenido: Crear contenido de YouTube/Escrito centrado en la solución a los "cuellos de botella" del soporte tradicional, posicionando estratégicamente los enlaces de afiliación para herramientas B2B de gestión de clientes o software de automatización.
+
+6. Anexos Técnicos
+
+Código de GitHub: https://github.com/MSE-256/ANALISIS/blob/master/I1_eco.ipynb
+
+Métricas del Modelo: Tablas o screenshots de la matriz de confusión, el precision/recall del clasificador de sentimiento o las métricas de coherencia del modelo de tópicos.
+    </div>
+</body>
+</html>

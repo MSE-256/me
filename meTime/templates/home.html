@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Desarrolladora AI, Backend & Product Designer</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Fuentes y Colores -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#111827',
+                        'secondary-dark': '#1F2937',
+                        'accent': '#3B82F6', // Azul brillante
+                        'text-light': '#F3F4F6',
+                        'text-muted': '#9CA3AF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Iconos de Lucide React, solo para la estética -->
+    <script type="module">
+        import 'https://unpkg.com/lucide@latest/dist/umd/lucide.js';
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            stroke-width: 2.5;
+        }
+    </style>
+</head>
+<body class="bg-primary-dark text-text-light font-sans antialiased">
+
+    <!-- Navbar Fija -->
+    <nav class="sticky top-0 z-50 bg-primary-dark/95 backdrop-blur-sm border-b border-secondary-dark p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span class="text-xl font-extrabold text-accent">DEV/DESIGN</span>
+            <div class="flex space-x-4 text-sm font-medium">
+                <a href="#about" class="hover:text-accent transition duration-200 hidden sm:block">Sobre Mí</a>
+                <a href="#skills" class="hover:text-accent transition duration-200 hidden sm:block">Habilidades</a>
+                <a href="#projects" class="hover:text-accent transition duration-200 hidden sm:block">Proyectos</a>
+                <a href="#content" class="hover:text-accent transition duration-200 hidden sm:block">Contenido</a>
+                <a href="#contact" class="bg-accent text-primary-dark px-3 py-1 rounded-full hover:bg-blue-600 transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="hero" class="py-16 md:py-28 text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Avatar Placeholder -->
+            <div class="w-28 h-28 mx-auto bg-secondary-dark rounded-full mb-6 border-4 border-accent/50 flex items-center justify-center text-4xl text-text-muted">
+                <!--  -->
+                <img src="/me/meTime/static/fondo.jpg" alt="MSE">
+                <i data-lucide="brain-circuit" class="icon w-12 h-12 text-accent"></i>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-4">
+                Fusionando <span class="text-accent">Inteligencia Artificial</span>, <br class="hidden sm:block">
+                Backend y Product Design
+            </h1>
+            <p class="text-lg sm:text-xl text-text-muted mb-8 max-w-2xl mx-auto">
+                Desarrolladora Python AI y Django, Diseñadora de Producto, y Educadora en YouTube/Filosofía. Creo soluciones tecnológicas centradas en el ser humano.
+            </p>
+            
+            <!-- Llamada a la acción principal -->
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="bg-accent text-primary-dark font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                    Ver Proyectos Tech
+                </a>
+                <a href="#content" class="bg-secondary-dark text-text-light font-semibold py-3 px-8 rounded-xl border border-text-muted/30 hover:border-accent transition duration-300 transform hover:scale-105">
+                    Ir a Divulgación
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí / Mi Filosofía -->
+    <section id="about" class="py-16 bg-secondary-dark px-4 border-t border-b border-primary-dark">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Mi Enfoque Interdisciplinar</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Tech Focus -->
+                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border border-accent/20">
+                    <i data-lucide="terminal" class="icon w-8 h-8 text-accent mb-4 mx-auto md:mx-0"></i>
+                    <h3 class="text-xl font-semibold mb-2">Ingeniería Sólida</h3>
+                    <p class="text-text-muted">Especializada en Python para el desarrollo de modelos de AI y Django para construir backends escalables y robustos que soporten productos reales.</p>
+                    <a  href="/me/meTime/templates/analisis.html" >Estudio de Mercado</a>
+                </div>
+
+                <!-- Design Focus -->
+                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border border-accent/20">
+                    <i data-lucide="layers-3" class="icon w-8 h-8 text-accent mb-4 mx-auto md:mx-0"></i>
+                    <h3 class="text-xl font-semibold mb-2">Product Design Centrado</h3>
+                    <p class="text-text-muted">Diseño productos pensando en la experiencia de usuario y el impacto. Entiendo el ciclo completo, desde la necesidad del mercado hasta el despliegue final.</p>
+                </div>
+
+                <!-- Content/Education Focus -->
+                <div class="p-6 bg-primary-dark rounded-xl shadow-xl border border-accent/20">
+                    <i data-lucide="graduation-cap" class="icon w-8 h-8 text-accent mb-4 mx-auto md:mx-0"></i>
+                    <h3 class="text-xl font-semibold mb-2">Educación y Filosofía</h3>
+                    <p class="text-text-muted">Mi formación en filosofía me permite analizar problemas complejos y comunicarlos de forma clara, esencial para la divulgación, la enseñanza en YouTube y el marketing.</p>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Habilidades Técnicas y Blandas -->
+    <section id="skills" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Conjunto de Habilidades</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Columna 1: Tecnología (Hard Skills) -->
+                <div class="p-6 bg-secondary-dark rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-accent">
+                        <i data-lucide="code" class="icon w-5 h-5 mr-2"></i>
+                        Tech & Backend
+                    </h3>
+                    <ul class="space-y-3 text-text-light/90">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Python (AI/ML)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Django & REST Framework</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Bases de Datos (PostgreSQL, SQL)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Docker & Despliegue (Deployment)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>APIs y Microservicios</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 2: Diseño y Producto -->
+                <div class="p-6 bg-secondary-dark rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-accent">
+                        <i data-lucide="layout-grid" class="icon w-5 h-5 mr-2"></i>
+                        Product & Design
+                    </h3>
+                    <ul class="space-y-3 text-text-light/90">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Metodologías de Product Design</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Pensamiento Crítico (Filosofía Aplicada)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Investigación y Benchmarking</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Wireframing & Prototipado (Figma/Sketch)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Visión de Producto a Largo Plazo</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contenido y Marketing -->
+                <div class="p-6 bg-secondary-dark rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center text-accent">
+                        <i data-lucide="megaphone" class="icon w-5 h-5 mr-2"></i>
+                        Divulgación & Marketing
+                    </h3>
+                    <ul class="space-y-3 text-text-light/90">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Creación de Contenido para YouTube</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Redacción Técnica y Creativa (Escritora)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Estrategias de Marketing Digital</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Marketing de Afiliados (En Desarrollo)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="icon w-4 h-4 mr-2 text-green-400"></i>Oratoria y Enseñanza (Profesora)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos -->
+    <section id="projects" class="py-16 bg-primary-dark px-4 border-t border-b border-secondary-dark">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Proyectos Clave</h2>
+            <p class="text-center text-text-muted mb-12 max-w-2xl mx-auto">
+                Aquí demuestro la aplicación de mis habilidades de desarrollo y diseño en proyectos reales.
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta de Proyecto 1: AI/ML -->
+                <div class="bg-secondary-dark rounded-xl overflow-hidden shadow-2xl border border-secondary-dark hover:border-accent/50 transition duration-300">
+                    <div class="p-6">
+                        <i data-lucide="bot-message-square" class="icon w-8 h-8 text-accent mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Motor de Recomendación Semántica</h3>
+                        <span class="inline-block text-sm font-medium text-primary-dark bg-accent/30 px-2 py-0.5 rounded-full mb-3">AI & Python</span>
+                        <p class="text-text-muted text-sm">Analisis de datos para optimizar la afiliación de productos, clasificado por intención de compra y sentimiento.</p>
+                        <a href="/me/meTime/templates/analisis.html" class="mt-4 inline-flex items-center text-accent hover:underline text-sm font-medium">
+                            Ver Case Study <i data-lucide="arrow-right" class="icon w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 2: Backend/Django -->
+                <div class="bg-secondary-dark rounded-xl overflow-hidden shadow-2xl border border-secondary-dark hover:border-accent/50 transition duration-300">
+                    <div class="p-6">
+                        <i data-lucide="server" class="icon w-8 h-8 text-accent mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Plataforma de Contenido Personalizado</h3>
+                        <span class="inline-block text-sm font-medium text-primary-dark bg-yellow-400/30 px-2 py-0.5 rounded-full mb-3">Django & DB</span>
+                        <p class="text-text-muted text-sm">Sistema backend con Django REST Framework para gestionar usuarios, permisos y distribución de contenido educativo (para el canal de YouTube).</p>
+                        <a href="https://github.com/MSE-256/store" class="mt-4 inline-flex items-center text-accent hover:underline text-sm font-medium">
+                            Ver Repositorio <i data-lucide="arrow-right" class="icon w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 3: Product Design -->
+                <div class="bg-secondary-dark rounded-xl overflow-hidden shadow-2xl border border-secondary-dark hover:border-accent/50 transition duration-300">
+                    <div class="p-6">
+                        <i data-lucide="lightbulb" class="icon w-8 h-8 text-accent mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">Rediseño UX/UI para Startup B2B</h3>
+                        <span class="inline-block text-sm font-medium text-primary-dark bg-purple-400/30 px-2 py-0.5 rounded-full mb-3">Product Design</span>
+                        <p class="text-text-muted text-sm">Investigación de usuarios, prototipado en Figma y estrategia de features para mejorar la retención de una herramienta de gestión de datos.</p>
+                        <a href="#" class="mt-4 inline-flex items-center text-accent hover:underline text-sm font-medium">
+                            Ver Portafolio de Diseño <i data-lucide="arrow-right" class="icon w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <p class="text-center text-text-muted mt-12">
+                *Nota: Los enlaces de los proyectos son placeholders. ¡Recuerda actualizarlos con tu contenido real!
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección de Divulgación y Contenido -->
+    <section id="content" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Contenido, Educación y Escritura</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Card de YouTube/Profesora -->
+                <div class="p-6 bg-secondary-dark rounded-xl shadow-2xl border border-secondary-dark flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                    <i data-lucide="youtube" class="icon w-12 h-12 text-red-500 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 text-center sm:text-left">Canal de YouTube (Profesora de Filo)</h3>
+                        <p class="text-text-muted mb-4 text-center sm:text-left">
+                            Comparto conocimiento sobre filosofía y cómo el pensamiento crítico se aplica a la tecnología y la vida diaria. ¡Más de [X] suscriptores!
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=BYCN_GneMCk">
+                            Visitar Canal <i data-lucide="arrow-up-right" class="icon w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card de Escritura/Marketing -->
+                <div class="p-6 bg-secondary-dark rounded-xl shadow-2xl border border-secondary-dark flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                    <i data-lucide="book-open-text" class="icon w-12 h-12 text-teal-400 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 text-center sm:text-left">Escritora y Estratega de Marketing</h3>
+                        <p class="text-text-muted mb-4 text-center sm:text-left">
+                            Redacto artículos, ensayos y contenido con alta calidad. Actualmente desarrollando mi plan de marketing digital y afiliación para monetizar el contenido.
+                        </p>
+                        <a href="#" class="inline-flex items-center bg-teal-600 text-text-light font-medium py-2 px-4 rounded-lg hover:bg-teal-700 transition">
+                            Ver Artículos <i data-lucide="arrow-up-right" class="icon w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="py-16 bg-secondary-dark px-4 border-t border-b border-primary-dark">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">¿Hablamos de tu Próximo Proyecto?</h2>
+            <p class="text-lg text-text-muted mb-8">
+                Estoy disponible para proyectos de consultoría, desarrollo AI/Django, diseño de producto o colaboraciones en contenido.
+            </p>
+            
+            <form id="contact-form" class="max-w-lg mx-auto space-y-4">
+                <input type="text" placeholder="Tu Nombre" required class="w-full p-3 rounded-lg bg-primary-dark border border-text-muted/20 focus:border-accent focus:ring-accent outline-none text-text-light">
+                <input type="email" placeholder="Tu Email" required class="w-full p-3 rounded-lg bg-primary-dark border border-text-muted/20 focus:border-accent focus:ring-accent outline-none text-text-light">
+                <textarea rows="4" placeholder="¿En qué puedo ayudarte?" required class="w-full p-3 rounded-lg bg-primary-dark border border-text-muted/20 focus:border-accent focus:ring-accent outline-none text-text-light"></textarea>
+                <button type="submit" class="w-full bg-accent text-primary-dark font-bold py-3 rounded-xl hover:bg-blue-600 transition duration-300 transform hover:scale-[1.02]">
+                    Enviar Mensaje
+                </button>
+            </form>
+            
+            <div id="message-status" class="mt-4 text-text-light font-medium opacity-0 transition duration-300"></div>
+
+            <p class="mt-8 text-sm text-text-muted">
+                También puedes contactarme directamente por:
+                <a href="#" class="text-accent hover:underline ml-2">0986436748</a> o
+                <a href="#" class="text-accent hover:underline ml-2">masoledith77@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 text-center text-text-muted text-sm">
+        <div class="max-w-7xl mx-auto border-t border-secondary-dark pt-6">
+            <p>&copy; 2024 Portafolio Personal. Creado con la mente de una desarrolladora y la visión de una diseñadora.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para manejar el formulario (simulación de envío) -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const statusDiv = document.getElementById('message-status');
+
+            statusDiv.textContent = 'Enviando mensaje...';
+            statusDiv.classList.remove('text-red-400', 'text-green-400', 'opacity-0');
+            statusDiv.classList.add('text-accent', 'opacity-100');
+            
+            // Simulación de una llamada API o envío de formulario
+            setTimeout(() => {
+                // Éxito simulado
+                statusDiv.textContent = '¡Mensaje enviado con éxito! Te responderé pronto.';
+                statusDiv.classList.replace('text-accent', 'text-green-400');
+                form.reset(); // Limpia el formulario
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html>
