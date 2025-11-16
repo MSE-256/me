@@ -9,8 +9,7 @@ djangorestframework-simplejwt==5.3.1
 drf-yasg==1.21.7
 
 # Base de datos
-psycopg2-binary==2.9.9  # PostgreSQL
-# mysqlclient==2.2.4  # Si usás MySQL en vez de PostgreSQL
+psycopg2-binary==2.9.9
 
 # Static/media
 Pillow==10.3.0
@@ -23,11 +22,8 @@ validators==0.22.0
 django-cors-headers==4.3.1
 django-filter==24.1
 
-# Otras
-gunicorn>=20.1.0
+# Servidores
+gunicorn==21.2.0
+
+# Static files
 whitenoise==6.6.0
-
-# Para producción
-uvicorn==0.29.0
-
-whitenoise
